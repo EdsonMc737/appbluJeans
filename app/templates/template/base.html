@@ -8,17 +8,22 @@
     <title>{{ home[0].titulo }}</title>
 </head>
 <body>
-    <h1>{{ home[0].titulo }}</h1>
-        <ul>
-    {% for modelo in modelos %}
-        <li>
-            <h2>{{ modelo.nome }}</h2>
-            <p>{{ modelo.descricao }}</p>
-            <img src="{{ url_for('static', filename=modelo.imagem) }}" alt="{{ modelo.nome }}">
-        </li>
-    {% endfor %}
-    </ul>
-    {% block template %}
-    {% endblock %}
+
+    <header>
+        <h1>{{ home[0].titulo }}</h1>
+        <p>Bem-vindo ao nosso portal de modelos</p>
+    </header>
+
+    <main>
+        
+      {% block template %}
+      {% endblock %}
+
+    </main>
+
+    <footer>
+        &copy; 2025 Seu Projeto. Todos os direitos reservados.
+    </footer>
+
 </body>
 </html>
