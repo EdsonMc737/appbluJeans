@@ -1,38 +1,137 @@
 {% extends 'template/base.html' %}
 {% block template %}
-<div class="perfil-header">
-    <!-- Foto de capa -->
-    <img src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}" style="display:none;">
-    <img class="perfil-avatar" src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
-</div>
+<div class="perfil-header"
+     style="background-image: url('{{ url_for('static', filename='img/capas/' ~ modelo.capa) }}');">
 
-<div class="perfil-info">
-    <h1>{{ modelo.nome }}</h1>
-    <p>{{ modelo.descricao }}</p>
-</div>
+    <!-- Avatar -->
+    <img class="perfil-avatar"
+         src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}"
+         alt="{{ modelo.nome }}">
 
-<div class="perfil-actions">
-    <button>Seguir</button>
-    <button>Mensagem</button>
-    <button>Curtir</button>
+    <div class="perfil-info">
+        <h1>{{ modelo.nome }}</h1>
+        <p>{{ modelo.descricao }}</p>
+
+        <div class="perfil-actions">
+            <button>Seguir</button>
+            <button>Mensagem</button>
+            <button>Curtir</button>
+        </div>
+    </div>
 </div>
 
 
 
 <!-- Ensaios Fotográficos -->
 <div class="ensaios">
-    {% if modelo.ensaios is defined %}
+    {% if modelo.ensaios %}
         {% for ensaio in modelo.ensaios %}
             <div class="ensaio">
-                <img src="{{ url_for('static', filename=ensaio.imagem) }}" alt="{{ ensaio.titulo }}">
-                <div class="ensaio-info">
-                    <h2>{{ ensaio.titulo }}</h2>
-                    <p>{{ ensaio.descricao if ensaio.descricao is defined else '' }}</p>
+
+                <h2>{{ ensaio.titulo }}</h2>
+                <p>{{ ensaio.descricao }}</p>
+
+                <div class="fotos-ensaio">
+                    {% for foto in ensaio.fotos %}
+                        <img src="{{ url_for('static', filename=foto) }}"
+                             alt="{{ ensaio.titulo }}">
+                    {% endfor %}
                 </div>
+
             </div>
         {% endfor %}
     {% endif %}
 </div>
+
+
+
+<!-- Modal para ampliar fotos com navegação -->
+<div id="modalFoto" class="modal">
+    <span class="modal-close">&times;</span>
+    <span class="modal-prev">&#10094;</span>
+    <span class="modal-next">&#10095;</span>
+    <img class="modal-content" id="imgModal">
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const modal = document.getElementById("modalFoto");
+    const modalImg = document.getElementById("imgModal");
+    const closeBtn = document.querySelector(".modal-close");
+    const prevBtn = document.querySelector(".modal-prev");
+    const nextBtn = document.querySelector(".modal-next");
+
+    let fotos = []; // array das fotos do ensaio
+    let indiceAtual = 0;
+
+    // Seleciona todos os ensaios
+    const ensaios = document.querySelectorAll(".ensaio");
+
+    ensaios.forEach(ensaio => {
+        const imagens = ensaio.querySelectorAll("img");
+
+        imagens.forEach((img, idx) => {
+            img.addEventListener("click", () => {
+                fotos = Array.from(imagens); // fotos do ensaio atual
+                indiceAtual = idx;
+                abrirModal(indiceAtual);
+            });
+        });
+    });
+
+    function abrirModal(i) {
+        modal.style.display = "block";
+        modalImg.src = fotos[i].src;
+    }
+
+    function mostrarProximo() {
+        indiceAtual = (indiceAtual + 1) % fotos.length;
+        modalImg.src = fotos[indiceAtual].src;
+    }
+
+    function mostrarAnterior() {
+        indiceAtual = (indiceAtual - 1 + fotos.length) % fotos.length;
+        modalImg.src = fotos[indiceAtual].src;
+    }
+
+    // Eventos das setas
+    nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mostrarProximo();
+    });
+
+    prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mostrarAnterior();
+    });
+
+    // Fechar ao clicar no X
+    closeBtn.onclick = () => { modal.style.display = "none"; }
+
+    // Fechar ao clicar fora da imagem
+    modal.onclick = () => { modal.style.display = "none"; }
+
+    // Evitar fechar quando clicar na imagem ou setas
+    modalImg.onclick = (e) => e.stopPropagation();
+    prevBtn.onclick = (e) => e.stopPropagation();
+    nextBtn.onclick = (e) => e.stopPropagation();
+
+    // Navegação pelo teclado
+    document.addEventListener("keydown", function(e) {
+        if(modal.style.display === "block") {
+            if(e.key === "ArrowRight") mostrarProximo();
+            if(e.key === "ArrowLeft") mostrarAnterior();
+            if(e.key === "Escape") modal.style.display = "none";
+        }
+    });
+
+});
+</script>
+
+
+
 
 
 {% endblock %}

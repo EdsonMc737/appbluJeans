@@ -1,111 +1,137 @@
- /* Cabeçalho do perfil */
+/* Cabeçalho do perfil */
+.perfil-header {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-end;
+    padding: 0 50px 30px;
+    box-sizing: border-box;
+    color: white;
+
+    /* Degradê para melhorar leitura */
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.7)
+    ), var(--capa-img);
+}
+
+/* Avatar */
+.perfil-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-right: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+/* Informações do perfil */
+.perfil-info h1 {
+    margin: 0 0 10px;
+    font-size: 2.4em;
+}
+
+.perfil-info p {
+    margin: 0 0 15px;
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+.perfil-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.perfil-actions button {
+    padding: 10px 20px;
+    background-color: #4267B2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.perfil-actions button:hover {
+    background-color: #365899;
+}
+
+/* Seção dos ensaios */
+.ensaios {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Bloco de cada ensaio */
+.ensaio {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.ensaio h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.ensaio p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Galeria de fotos */
+.fotos-ensaio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.fotos-ensaio img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.fotos-ensaio img:hover {
+    transform: scale(1.03);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
     .perfil-header {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        background: url('capa.jpg') center/cover no-repeat;
-        display: flex;
-        align-items: flex-end;
-        padding: 0 50px;
-        box-sizing: border-box;
-        color: white;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 20px;
     }
 
     .perfil-avatar {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 5px solid white;
-        object-fit: cover;
-        margin-right: 30px;
-    }
-
-    .perfil-info h1 {
-        margin: 0 0 10px 0;
-        font-size: 2em;
-    }
-
-    .perfil-info p {
         margin: 0 0 20px 0;
-        font-size: 1.1em;
-        color: #ddd;
     }
 
-    .perfil-actions {
-        display: flex;
-        gap: 10px;
+    .fotos-ensaio {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    .perfil-actions button {
-        padding: 10px 20px;
-        background-color: #4267B2;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+@media (max-width: 480px) {
+    .fotos-ensaio {
+        grid-template-columns: repeat(1, 1fr);
     }
-
-    .perfil-actions button:hover {
-        background-color: #365899;
-    }
-
-    /* Seção dos ensaios */
-    .ensaios {
-        max-width: 1200px;
-        margin: 50px auto;
-        padding: 0 20px;
-    }
-
-    .ensaio {
-        background: white;
-        border-radius: 10px;
-        margin-bottom: 30px;
-        overflow: hidden;
-        display: flex;
-        flex-wrap: wrap;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .ensaio img {
-        width: 100%;
-        max-width: 400px;
-        object-fit: cover;
-    }
-
-    .ensaio-info {
-        padding: 20px;
-        flex: 1;
-    }
-
-    .ensaio-info h2 {
-        margin-top: 0;
-        font-size: 1.8em;
-    }
-
-    .ensaio-info p {
-        font-size: 1em;
-        color: #555;
-    }
-
-    /* Responsivo */
-    @media (max-width: 768px) {
-        .perfil-header {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            height: auto;
-            padding: 20px;
-        }
-
-        .perfil-avatar {
-            margin: 0 0 20px 0;
-        }
-
-        .ensaio {
-            flex-direction: column;
-        }
-
-        .ensaio img {
-            max-width: 100%;
-        }
-    }
+}
