@@ -2,7 +2,7 @@
 .carrossel {
     position: relative;
     width: 100%;
-    background-color: var(--roxo-escuro);
+    background-color: var( --vermelho-escuro);
     color: var(--branco);
     margin-top: 13rem;
     overflow: visible;
@@ -12,11 +12,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     height: 100%;
     position: relative;
     width: 100%;
     user-select: none;
     overflow: visible;
+    padding: 100px 0;
 }
 
 /* Botões setas */
@@ -48,6 +50,17 @@
     font-family: 'Fraktur', serif;
     margin-bottom: 1.5rem;
     user-select: none;
+<<<<<<< HEAD
+=======
+}
+.carrossel .modelo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.3s;
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)
 }
 
 /* Cards do carrossel */

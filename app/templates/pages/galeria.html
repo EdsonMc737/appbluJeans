@@ -1,7 +1,11 @@
 {% extends 'template/base.html' %}
 {% block template %}
-
+ <!--BANNER-->
+ {% include "component/banner.html" %}
 <h1 class="titulo">Galeria de Modelos</h1>
+
+<!-- Container único para enviar dados ao JS externo -->
+<div id="app" data-modelos='{{ modelos | tojson | default("[]") | safe }}'></div>
 
 <div class="gallery">
     {% for modelo in modelos %}
@@ -11,9 +15,15 @@
         <div class="info">
             <h2>{{ modelo.nome }}</h2>
             <p>{{ modelo.descricao }}</p>
+<<<<<<< HEAD
             <span class="ver" onclick="abrirSelecaoEnsaio({{ modelo.id }})">
                 Ver Ensaios → 
             </span>
+=======
+            <button class="ver" onclick="abrirSelecaoEnsaio({{ modelo.id }})">
+                Ver Ensaios →
+            </button>
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)
         </div>
     </div>
     {% endfor %}
@@ -30,6 +40,7 @@
     </div>
 
     <div class="modal-thumbnails" id="thumbnailsContainer"></div>
+<<<<<<< HEAD
 </div>
 
 <!-- Modal de seleção de ensaios -->
@@ -131,4 +142,16 @@ document.addEventListener("keydown", e => {
     }
 });
 </script>
+=======
+</div>
+
+<!-- Modal de seleção de ensaios -->
+<div id="modalSelecao" class="modal">
+    <span class="modal-close" onclick="fecharSelecao()">&times;</span>
+    <div class="modal-main" id="listaEnsaios"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/photo-gallery.js') }}"></script>
+
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)
 {% endblock %}

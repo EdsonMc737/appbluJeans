@@ -51,3 +51,11 @@ def imagens():
 @home_bp.route('/contato')
 def contatos():
     return render_template('pages/contato.html', titulo="Contato")
+<<<<<<< HEAD
+=======
+
+# Página de serviços
+@home_bp.route('/servico')
+def servicos():
+    return render_template('pages/servicos.html', titulo="Serviços")
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)

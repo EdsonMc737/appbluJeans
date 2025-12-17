@@ -1,3 +1,15 @@
+.ver {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+}
+.ver:hover {
+    text-decoration: underline;
+}
+
 /* ================= CONTAINER DOS ENSAIOS ================= */
 .ensaios {
     display: flex;

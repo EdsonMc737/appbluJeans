@@ -550,7 +550,7 @@ def perfil_modelos():
         {
             "id": 7 ,
             "nome": "Leah Gotti",
-            "descricao": "Americana, Morena, Pequena, Tatuada",
+            "descricao": "Morena, Tatuada",
 
             "imagem": "../../../static/img/destaques/LeahGotti_1.jpg",
             "capa": "../../../static/img/capas/LeahGotti_1.jpg",
@@ -643,7 +643,7 @@ def perfil_modelos():
         {
             "id": 8 ,
             "nome": "Lana Rhoades",
-            "descricao": "Americana, Morena, Seios de Silicone, Baixinha, Tatuada",
+            "descricao": "Morena, Tatuada",
 
             "imagem": "../../../static/img/destaques/LanaRhoades_1.jpg",
             "capa": "../../../static/img/capas/LanaRhoades_1.jpg",
@@ -725,7 +725,7 @@ def perfil_modelos():
         {
             "id": 9 ,
             "nome": "Lacy Lennon",
-            "descricao": "Americana, Ruiva, Tatuagem",
+            "descricao": "Ruiva, Tatuagem",
 
             "imagem": "../../../static/img/destaques/LacyLennon_1.jpg",
             "capa": "../../../static/img/capas/LacyLennon_1.jpg",
@@ -804,7 +804,7 @@ def perfil_modelos():
         {
             "id": 10 ,
             "nome": "Nancy A",
-            "descricao": "Loira, Magra, Tatuagem, Ucraniana",
+            "descricao": "Loira, Tatuagem",
 
             "imagem": "../../../static/img/destaques/NancyA_1.jpg",
             "capa": "../../../static/img/capas/NancyA_1.jpg",
@@ -1019,7 +1019,7 @@ def perfil_modelos():
                         "../../../static/img/modelos/Aleksandrina/Aleksandrina_2/Aleksandrina_18.jpg", 
                         "../../../static/img/modelos/Aleksandrina/Aleksandrina_2/Aleksandrina_19.jpg",
                         "../../../static/img/modelos/Aleksandrina/Aleksandrina_2/Aleksandrina_20.jpg",
-                         "../../../static/img/modelos/Aleksandrina/Aleksandrina_2/Aleksandrina_21.jpg",
+                        "../../../static/img/modelos/Aleksandrina/Aleksandrina_2/Aleksandrina_21.jpg",
                         "../../../static/img/modelos/Aleksandrina/Aleksandrina_2/Aleksandrina_22.jpg",
                         "../../../static/img/modelos/Aleksandrina/Aleksandrina_2/Aleksandrina_23.jpg",
                         "../../../static/img/modelos/Aleksandrina/Aleksandrina_2/Aleksandrina_24.jpg",
@@ -1080,7 +1080,7 @@ def perfil_modelos():
          {
             "id": 13 ,
             "nome": "Aletta Ocean",
-            "descricao": " Morena húngara, MILF, tatuagem, ",
+            "descricao": " Morena, tatuagem, ",
             "imagem": "../../../static/img/destaques/AlettaOcean_1.jpg",
             "capa": "../../../static/img/capas/AlettaOcean_1.jpg",
             "thumb":  "../../../static/img/modelos/AlettaOcean/AlettaOcean_1/AlettaOcean_2.jpg",
@@ -1152,7 +1152,7 @@ def perfil_modelos():
          {
             "id": 14 ,
             "nome": "Alex Grey",
-            "descricao": "Americana, Loira, Tatuada",
+            "descricao": "Loira, Tatuada",
             "imagem": "../../../static/img/destaques/AlexGrey_1.jpg",
 
             "capa": "../../../static/img/capas/AlexGrey_1.jpg",
@@ -1425,7 +1425,7 @@ def perfil_modelos():
          {
             "id": 17 ,
             "nome": "Dani Daniels",
-            "descricao": "Americana, Morena, MILF, Tatuagem",
+            "descricao": "Morena, Tatuagem",
             "imagem": "../../../static/img/destaques/DaniDaniels_1.jpg",
             "capa": "../../../static/img/capas/DaniDaniels_1.jpg",
             "thumb":    "../../../static/img/modelos/DaniDaniels/DaniDaniels_1/DaniDaniels_2.jpg",
@@ -1508,7 +1508,7 @@ def perfil_modelos():
          {
             "id": 18 ,
             "nome": "Debora A",
-            "descricao": "Morena, Baixinha, Magra, Tatuada, Ucraniana",
+            "descricao": "Morena, Tatuada",
             "imagem": "../../../static/img/destaques/DeboraA_1.jpg",
             "capa": "../../../static/img/capas/DeboraA_1.jpg",
             "thumb":   "../../../static/img/modelos/DeboraA/DeboraA_2/DeboraA_1.jpg",
@@ -1589,7 +1589,7 @@ def perfil_modelos():
          {
             "id": 19 ,
             "nome": "Elsa Jean",
-            "descricao": "Americana, Loira, Baixinha, Magra, Tatuada",
+            "descricao": "Loira, Tatuada",
             "imagem": "../../../static/img/destaques/ElsaJean_1.jpg",
             "capa": "../../../static/img/capas/ElsaJean_1.jpg",
             "thumb":    "../../../static/img/modelos/ElsaJean/ElsaJean_1/ElsaJean_2.jpg",
@@ -1682,8 +1682,8 @@ def perfil_modelos():
         },
          {
             "id": 20 ,
-            "nome": "Esperanza Gomez",
-            "descricao": "Atlético, Morena, Colombiana, Latina, MILF",
+            "nome": "Esperanza G.",
+            "descricao": "Morena, Latina",
             "imagem": "../../../static/img/destaques/EsperanzaGomez_1.jpg",
             "capa": "../../../static/img/capas/EsperanzaGomez_1.jpg",
             "thumb":   "../../../static/img/modelos/EsperanzaGomez/EsperanzaGomez_1/EsperanzaGomez_2.jpg",
@@ -1848,7 +1848,7 @@ def perfil_modelos():
          {
             "id": 22 ,
             "nome": "Nicole Aniston",
-            "descricao": "Americana, Loira, MILF, Tatuada",
+            "descricao": "Loira, Tatuada",
             "imagem": "../../../static/img/destaques/NicoleAniston_1.jpg",
             "capa": "../../../static/img/capas/NicoleAniston_1.jpg",
             "thumb": "../../../static/img/modelos/NicoleAniston/NicoleAniston_6/NicoleAniston_5.jpg",
@@ -1936,7 +1936,7 @@ def perfil_modelos():
          {
             "id": 23 ,
             "nome": "Hayli Sanders",
-            "descricao": "Morena, Europeia, Baixinha, Tatuagem, Ucraniana",
+            "descricao": "Morena, Tatuagem",
             "imagem": "../../../static/img/destaques/HayliSanders_1.jpg",
             "capa": "../../../static/img/capas/HayliSanders_1.jpg",
             "thumb":  "../../../static/img/modelos/HayliSanders/HayliSanders_3/HayliSanders_1.jpg",
@@ -2130,7 +2130,7 @@ def perfil_modelos():
          {
             "id": 25 ,
             "nome": "Kimmy Granger",
-            "descricao": "Americana, Morena, Pequena, Baixinha, Magra,",
+            "descricao": "Morena,",
             "imagem": "../../../static/img/destaques/KimmyGranger_1.jpg",
             "capa": "../../../static/img/capas/KimmyGranger_1.jpg",
             "thumb":  "../../../static/img/modelos/KimmyGranger/KimmyGranger_2/KimmyGranger_2.jpg",
@@ -2216,7 +2216,7 @@ def perfil_modelos():
          {
             "id": 26 ,
             "nome": "Jane Davis",
-            "descricao": "Americana, morena, tatuagem",
+            "descricao": "Morena, tatuagem",
 
             "imagem": "../../../static/img/destaques/JaneDavis_1.jpg",
             "capa": "../../../static/img/capas/JaneDavis_1.jpg",
@@ -2307,7 +2307,7 @@ def perfil_modelos():
         {
             "id": 27 ,
             "nome": "Jewl zBlu",
-            "descricao": "Morena, Alemã, Adolescente",
+            "descricao": "Morena",
             "imagem": "../../../static/img/destaques/JewlzBlu_1.jpg",
             "capa": "../../../static/img/capas/JewlzBlu_1.jpg",
             "thumb": "../../../static/img/modelos/JewlzBlu/JewlzBlu_2/JewlzBlu_1.jpg",
@@ -2398,7 +2398,7 @@ def perfil_modelos():
         {
             "id": 28 ,
             "nome": "Julia Morozzin",
-            "descricao": "Cabelo castanho, morena, russa",
+            "descricao": "Cabelo castanho",
             "imagem": "../../../static/img/destaques/JuliaMorozzi_1.jpg",
             "capa": "../../../static/img/capas/JuliaMorozzi_1.jpg",
             "thumb":  "../../../static/img/modelos/JuliaMorozzi/JuliaMorozzi_1/JuliaMorozzi_2.jpg",
@@ -2487,7 +2487,7 @@ def perfil_modelos():
         {
             "id": 29 ,
             "nome": "Kali Rose",
-            "descricao": "Americana, atlética, tatuagem",
+            "descricao": "Americana, tatuagem",
             "imagem": "../../../static/img/destaques/KaliRose_1.jpg",
             "capa": "../../../static/img/capas/KaliRose_1.jpg",
             "thumb":   "../../../static/img/modelos/KaliRose/KaliRose_1/KaliRose_2.jpg",
@@ -2546,7 +2546,7 @@ def perfil_modelos():
         {
             "id": 30 ,
             "nome": "Lena Paul",
-            "descricao": "Americana, Loira, MILF,",
+            "descricao": "Americana, Loira",
             "imagem": "../../../static/img/destaques/LenaPaul_1.jpg",
             "capa": "../../../static/img/capas/LenaPaul_1.jpg",
             "thumb":   "../../../static/img/modelos/LenaPaul/LenaPaul_1/LenaPaul_2.jpg",
@@ -2617,7 +2617,11 @@ def perfil_modelos():
         {
             "id": 31,
             "nome": "Gina Valentina",
+<<<<<<< HEAD
             "descricao": "Americana, Morena, Branca",
+=======
+            "descricao": "Americana, Morena",
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)
             "imagem": "../../../static/img/destaques/GinaValentina_1.jpg",
             "capa": "../../../static/img/capas/GinaValentina_1.jpg",
             "thumb":   "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_2.jpg",

@@ -1,0 +1,83 @@
+.servicos-full {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.servicos-titulo {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: var(--azul-marinho);
+}
+
+/* CARD COM IMAGEM DE FUNDO */
+.servico-card {
+    position: relative;
+    height: 300px;
+    margin-bottom: 35px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.servico-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: 0.4s ease;
+}
+
+.servico-card:hover img {
+    filter: brightness(55%);
+}
+
+/* OVERLAY */
+.servico-overlay {
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0,0,0,0));
+    width: 100%;
+}
+
+.servico-overlay h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.servico-overlay p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    max-width: 80%;
+}
+
+.btn-servico {
+    display: inline-block;
+    background: var(--vermelho-escuro);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-servico:hover {
+    background: var(--vermelho-claro);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .servico-card {
+        height: 260px;
+    }
+    .servico-overlay p {
+        max-width: 100%;
+    }
+}

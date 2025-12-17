@@ -10,6 +10,7 @@
     <title>{{ titulo }}</title>
 </head>
 <body>
+<<<<<<< HEAD
 
     <header>
 <!-- NAV MENU -->
@@ -50,15 +51,22 @@
         </a>
         <!-- FIM DO NAV -->
 
+=======
+  <header id="topo">
+    <!-- conteúdo do topo -->
+<!-- NAV MENU -->
+ {% include "component/navmenu.html" %}
+<!-- FIM DO NAV -->
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)
     </header>
-
     <main>
         {% block template %}
         {% endblock %}
     </main>
-<footer class="footer">
-    <div class="footer-container">
+    <!-- Botão no final da página ou onde quiser -->
+    <a href="#topo" class="btn-voltar">⬆ Voltar ao Início</a>
 
+<<<<<<< HEAD
         <p class="footer-title">Siga-nos nas redes sociais</p>
 
         <div class="social-icons">
@@ -72,6 +80,9 @@
         <p class="copy">© 2025 — Todos os direitos reservados.</p>
     </div>
 </footer>
+=======
+    {% include "component/rodape.html" %}
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)
 
 
     <script>

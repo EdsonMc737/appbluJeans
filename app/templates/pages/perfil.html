@@ -1,6 +1,7 @@
-{% extends 'template/base_modelo.html' %}
+{% extends 'template/base.html' %}
 {% block template %}
 
+<<<<<<< HEAD
 <div class="perfil-header" style="background-image: url('{{ url_for('static', filename='img/capas/' ~ modelo.capa) }}');">
     <img class="perfil-avatar" src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
     <div class="perfil-info">
@@ -13,6 +14,9 @@
         </div>
     </div>
 </div>
+=======
+{% include "component/perfilface.html" %}
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)
 
 <!-- Ensaios Fotográficos -->
 <div class="ensaios">
@@ -42,6 +46,7 @@
     <div class="modal-thumbnails" id="thumbnailsContainer"></div>
 </div>
 
+<<<<<<< HEAD
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("modalFoto");
@@ -114,5 +119,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+=======
+<script src="{{url_for('static', filename='js/perfil.js')}}"></script>
+>>>>>>> ace7ced (Implementado js e outras funcionalidades)
 
 {% endblock %}
