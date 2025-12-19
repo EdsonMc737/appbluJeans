@@ -1,3 +1,4 @@
+/* ===== Navbar ===== */
 .navbar {
     display: flex;
     align-items: center;
@@ -7,19 +8,25 @@
     color: var(--branco);
     font-family: var(--fonte-secundaria);
     position: relative;
-    z-index: 50; /* garante que fique acima de outros elementos */
+    z-index: 50;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* leve profundidade */
 }
 
-/* Logo à esquerda */
+/* Logo */
 .navbar .logo a {
     font-family: var(--fonte-titulos);
     font-size: 28px;
     font-weight: bold;
     color: var(--vermelho-claro);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* Links centralizados */
+.navbar .logo a:hover {
+    color: var(--branco);
+}
+
+/* Links */
 .navbar .nav-links {
     list-style: none;
     display: flex;
@@ -33,14 +40,16 @@
     color: var(--branco);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
+    padding: 6px 0;
 }
 
 .navbar .nav-links li a:hover {
     color: var(--vermelho-claro);
+    transform: scale(1.05); /* leve efeito de destaque */
 }
 
-/* Formulário de pesquisa à direita */
+/* Formulário de pesquisa */
 .search-form {
     display: flex;
     align-items: center;
@@ -53,11 +62,11 @@
     border: 2px solid var(--cinza-medio);
     outline: none;
     font-size: 14px;
-    transition: all 0.3s ease;
     width: 160px;
     font-family: var(--fonte-texto);
     background-color: var(--branco);
     color: var(--azul-marinho);
+    transition: all 0.3s ease;
 }
 
 .search-form input[type="text"]:focus {
@@ -72,11 +81,12 @@
     padding: 6px 12px;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .search-form button:hover {
     background-color: var(--vermelho-claro);
+    transform: translateY(-2px);
 }
 
 /* Menu button (mobile) */
@@ -118,7 +128,7 @@
 
     .nav-links.open {
         display: flex;
-        max-height: 500px; /* suficiente para mostrar todos os links */
+        max-height: 500px;
         gap: 0;
         text-align: center;
     }

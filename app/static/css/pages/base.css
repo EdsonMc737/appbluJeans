@@ -10,13 +10,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--fonte-principal);
-    background-color: var(--vermelho-escuro);
-    color: var(--azul-marinho);
+    background-color: var(--preto); /* fundo escuro */
+    color: var(--branco); /* texto principal claro */
 }
 
 /* Header */
 header {
-    background-color: var(--roxo-escuro);
+    background-color: var(--roxo-escuro); /* destaque sofisticado */
     color: var(--branco);
     padding: 2rem;
     text-align: center;
@@ -26,20 +26,23 @@ header h1 {
     font-family: var(--fonte-secundaria);
     font-size: 3rem;
     margin: 0;
+    color: var(--vermelho-claro); /* título chama atenção */
 }
 
 header p {
     font-family: var(--fonte-texto);
     font-size: 1.2rem;
-    margin: 0.5rem;
+    margin: 0.5rem 0;
+    color: var(--cinza-claro); /* texto secundário suave */
 }
 
+/* Botão Voltar */
 .btn-voltar {
     position: fixed;
     bottom: 30px;
     left: 30px;
-    background: #ff3ea5;
-    color: #fff;
+    background: var(--vermelho-claro);
+    color: var(--preto);
     padding: 12px 16px;
     border-radius: 50px;
     text-decoration: none;
@@ -50,7 +53,7 @@ header p {
 }
 
 .btn-voltar:hover {
-    background: #ff63b5;
+    background: #ff6666; /* hover suave mantendo destaque */
     transform: translateY(-3px);
 }
 
@@ -59,6 +62,19 @@ main {
     flex: 1;
     padding: 2rem;
     padding-bottom: 120px; /* espaço para o footer */
+    background-color: var(--preto); /* cria contraste com header */
+    color: var(--cinza-claro);
+}
+
+/* Links dentro do main */
+main a {
+    color: var(--vermelho-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+main a:hover {
+    color: var(--azul-marinho); /* hover sofisticado */
 }
 
 /* ===== Responsivo ===== */

@@ -10,10 +10,11 @@
         <li><a href="{{url_for('home.contatos')}}">Contato</a></li>
     </ul>
 
-    <form class="search-form" action="{{ url_for('home.index') }}" method="GET">
-        <input type="text" name="pesquisa" placeholder="Digite Nome" value="{{ pesquisa }}">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+   <form class="search-form" action="{{ url_for('home.index') }}" method="GET">
+    <input type="text" name="pesquisa" placeholder="Digite Nome" value="{{ pesquisa }}">
+    <button type="submit" class="btn-navbar"><span><i class="fa fa-search"></i></span></button>
+</form>
+
 
     <div class="menu-btn" id="menuBtn">&#9776;</div>
 </nav>

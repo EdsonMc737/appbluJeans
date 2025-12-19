@@ -1,96 +1,111 @@
-/* Banner principal */
+/* ---------------- Banner Principal ---------------- */
 .banner-principal {
     position: relative;
     width: 100%;
-    height: 500px; /* altura padrão desktop */
+    height: 500px;
     overflow: hidden;
+    background: var(--preto);
 }
 
 .banner-principal img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.55); /* escurece a imagem para destaque do texto */
 }
 
-/* Overlay */
+/* Overlay elegante usando cores profundas */
 .banner-principal .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(43, 0, 56, 0.7) 0%,   /* roxo-escuro */
+        rgba(51, 0, 0, 0.8) 100%    /* vermelho-escuro */
+    );
     z-index: 1;
 }
 
-/* Texto centralizado */
+/* Texto do banner */
 .banner-texto {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+    bottom: 60px;
+    left: 60px;
     z-index: 2;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    color: var(--branco);
+    max-width: 420px;
 }
 
 .banner-texto h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .banner-texto p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 25px;
 }
 
+/* ---------------- Botão Ghost / Luxo ---------------- */
 .btn-banner {
-    padding: 15px 35px;
-    background-color: #ff4081;
-    color: white;
-    font-size: 1.2em;
+    padding: 10px 26px;
+    border: 1px solid rgba(255,255,255,0.25);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--branco);
+    background: transparent;
     text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .btn-banner:hover {
-    background-color: #e73370;
+    background: var(--vermelho-claro); /* destaque do hover */
+    color: var(--preto); /* contraste */
+    border-color: var(--vermelho-claro);
 }
 
-/* ----------------- Media Queries ----------------- */
-
-/* Tablets (largura até 992px) */
-@media (max-width: 992px) {
+/* ---------------- Responsivo ---------------- */
+@media (max-width: 768px) {
     .banner-principal {
-        height: 400px;
+        height: 380px;
     }
+
+    .banner-texto {
+        left: 30px;
+        bottom: 40px;
+    }
+
     .banner-texto h1 {
-        font-size: 2.5em;
-    }
-    .banner-texto p {
-        font-size: 1.2em;
-    }
-    .btn-banner {
-        font-size: 1em;
-        padding: 12px 28px;
+        font-size: 1.8rem;
     }
 }
 
-/* Celulares (largura até 576px) */
-@media (max-width: 576px) {
+@media (max-width: 480px) {
     .banner-principal {
         height: 300px;
     }
+
+    .banner-texto {
+        left: 20px;
+        bottom: 30px;
+    }
+
     .banner-texto h1 {
-        font-size: 1.8em;
+        font-size: 1.4rem;
     }
+
     .banner-texto p {
-        font-size: 1em;
+        font-size: 0.9rem;
     }
+
     .btn-banner {
-        font-size: 0.9em;
-        padding: 10px 20px;
+        padding: 8px 20px;
+        font-size: 0.75rem;
     }
 }
